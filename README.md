@@ -2,8 +2,8 @@
 Java sample application for running on container created by Cloud Native Buildpacks
 
 ## Abstract
-This sample web application use Spring Boot.  
-The application return value of response key in URL parameter.  
+This sample web application uses Spring Boot.  
+The application return value of the response key in a URL parameter.  
 
 ## End-point
 * \<host\>:\<port\>/parameter
@@ -14,8 +14,8 @@ The application return value of response key in URL parameter.
 
 
 ## Examples
-### Prerequire
-Confirmed the running this application in the following environment.
+### Prerequisite
+Confirmed the running of this application in the following environment.
 
 |Software|Version|Note|
 |:--:|:--:|:--|
@@ -23,7 +23,7 @@ Confirmed the running this application in the following environment.
 |pack|0.29.0|https://buildpacks.io/docs/tools/pack/|
 
 ### Build
-Building container image in which java(web) application is ready to run.
+Building container image in which Java (web) application is ready to run.
 ~~~
 $ pack build app --path buildpacks-sample --builder paketobuildpacks/builder:full
 ...
@@ -31,7 +31,7 @@ Successfully built image app
 ~~~
 
 ### Run
-Start up applicaiton(container) and checking communication with the application.
+Start up the application (container) and check communication with the application.
 ```
 $ docker run --rm -d -p 8080:8080 app
 $ curl localhost:8080/parameter?response=foo
